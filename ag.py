@@ -1,10 +1,20 @@
 import random
 
+def createPopulation1(n, li, ls):
+
+    lenChromosome = len(bin(ls))
+
+    population = []
+    i = 0
+    while(i < n):
+        population.append(format(random.randint(li, ls), '#0'+str(lenChromosome)+'b').split('b')[1])
+        i += 1
+    return population
 
 def createPopulation(n, li, ls):
-    
+
     lenChromosome = len(bin(ls))
-    
+
     population = []
     i = 0
     while(i < n):
